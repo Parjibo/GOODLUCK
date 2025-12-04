@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Card Details Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      padding: 20px;
+      width: 380px;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    label {
+      font-size: 13px;
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #444;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      border: 1px solid #c3c3c3;
+      font-size: 14px;
+      background: #f9f9f9;
+      margin-bottom: 18px;
+    }
+
+    .inline-group {
+      display: flex;
+      gap: 12px;
+    }
+
+    .inline-group input {
+      flex: 1;
+    }
+
+    .note {
+      font-size: 11px;
+      color: #777;
+      margin-bottom: 14px;
+      line-height: 1.4;
+    }
+
+    button {
+      width: 100%;
+      padding: 16px;
+      background: #d6d6d6;
+      color: #555;
+      border: none;
+      font-size: 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Card Details</h2>
+    <form>
+      <label>Name on Visa card*</label>
+      <input type="text" placeholder="Enter cardholder name" required />
+
+      <label>Visa card number*</label>
+      <input type="text" placeholder="Card number" required />
+
+      <div class="inline-group">
+        <div>
+          <label>Expiry date*</label>
+          <input type="text" placeholder="MM/YY" required />
+        </div>
+        <div>
+          <label>CVV*</label>
+          <input type="password" placeholder="*" required />
+        </div>
+      </div>
+
+      <label>Country of issuance*</label>
+      <select required>
+        <option value="">Select Country</option>
+        <option>India</option>
+        <option>Liberia</option>
+        <option>United States</option>
+        <option>United Kingdom</option>
+      </select>
+
+      <p class="note">DragonPass may use this information to verify your eligibility to receive benefits under this Program and may share your information with Visa, your Card issuing bank and relevant service providers for the purposes of managing this Program.</p>
+
+      <p class="note">Your Visa card will be automatically saved under your profile for future Program related purchases. You won't be charged without your permission.</p>
+
+      <button type="submit">Continue</button>
+    </form>
+  </div>
+</body>
+</html>
